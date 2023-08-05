@@ -22,68 +22,66 @@
 <body>
     <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v17.0" nonce="q0qYDhYk"></script>
-
-    <div class="container">
-        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-12">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
-                <div class="container-fluid">
-                    <img src="assets/img/logocemh.jpg" alt="Bootstrap" width="60" height="24">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+<section id="headeader" class="menu-home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
+        <div class="container-fluid">
+            <img src="assets/img/logocemh.jpg" alt="Bootstrap" width="60" height="24">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Articulos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Proyecto 1</a></li>
+                            <li><a class="dropdown-item" href="#">Proyecto 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Articulos</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Proyectos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Proyecto 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Proyecto 2</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Proyecto 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Campañas
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Proyecto 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Proyecto 2</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Proyecto 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Quienes somos?</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="femicidios.html" class="nav-link ">Base femicidios</a>
-                            </li>
+                            <li><a class="dropdown-item" href="#">Proyecto 3</a></li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Campañas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Proyecto 1</a></li>
+                            <li><a class="dropdown-item" href="#">Proyecto 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Proyecto 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quienes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ">Base femicidios</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </nav>
+</section>
+  
 
     <!--slider-->
-    <div class="container">
+    <div class="container-1">
         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-12">
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -262,11 +260,13 @@
     <section class="bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4">Últimas noticias</h2>
-            <div class="row fb-center">
-                <div class="fb-page" data-href="https://www.facebook.com/centrode.delamujer/" data-tabs="timeline" data-width="1000" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                    <blockquote cite="https://www.facebook.com/centrode.delamujer/" class="fb-xfbml-parse-ignore">
-                        <a href="https://www.facebook.com/centrode.delamujer/">Centro de Estudios de la Mujer</a>
-                    </blockquote>
+            <div class="row" style="text-align: center;width: 100%;">
+                <div class="col-12">
+                    <div class="fb-page" data-href="https://www.facebook.com/centrode.delamujer/" data-tabs="timeline" data-width="1000" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/centrode.delamujer/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/centrode.delamujer/">Centro de Estudios de la Mujer</a>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </div>
