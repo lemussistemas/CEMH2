@@ -23,6 +23,11 @@
         height: 400px;
         width: 100%;
       }
+      #bar3 {
+        height: 400px;
+        width: 100%;
+      }
+      
     </style>
 </head>
 
@@ -137,7 +142,7 @@
                 </div>
             
             </div>
-            <div class="col-md-12 v-divider">
+            <div class="col-md-7 v-divider">
 
                 <div class="card mb-4">
                     <p class="lead text-center" ><b>
@@ -151,15 +156,28 @@
                 </div>
             
             </div>
+            <div class="col-md-5 v-divider">
+
+                <div class="card mb-4">
+                    <p class="lead text-center" ><b>
+                        Femicidios por departamento:</b>
+                    </p>
+                    <div class="card-body">
+                        <div id="bar3">
+                        
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
         </div>
     </div>
 
 </body>
 
 <script src="js/lib/d3/d3.min.js"></script>
+
 <script src="js/lib/d3plus/d3plus-plot.v0.8.full.min.js"></script>
-
-
 <script type="text/javascript">
 
 var myData = [
@@ -248,5 +266,41 @@ new d3plus.BarChart()
     
     
     </script>
+
+<script src="js/lib/hierarchy.js"></script>
+<script>
+
+    var myData = [
+      {"Group": "Cortés", "Sub-Group": "FM", "Femicidios": 100},
+      {"Group": "Francisco Morazán", "Sub-Group": "SPS", "Femicidios": 150},
+      {"Group": "Copán", "Sub-Group": "FM", "Femicidios": 50},
+      {"Group": "El Paraíso", "Sub-Group": "SPS", "Femicidios": 30}
+    ];
+    new d3plus.Pie()
+      .config({
+        data: myData,
+        groupBy: ["Group"],
+        value: function(d) {
+          return d["Femicidios"];
+        }
+      })
+      .tooltipConfig({
+    body: function(d) {
+      var table = "<table class='tooltip-table'>";
+      table += "<tr><td class='title'>Femicidios:</td><td class='data'>" + d["Femicidios"] + "</td></tr>";
+      table += "</table>";
+      return table;
+    },
+    footer: function(d) {
+      return "<sub class='tooltip-footer'>CEMH</sub>";
+    },
+    title: function(d) {
+      var txt = d.Group;
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();;
+    }
+  })
+      .select("#bar3")
+      .render();
+</script>
 </script>
 </html>
