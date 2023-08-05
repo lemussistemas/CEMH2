@@ -10,3 +10,27 @@
 .bg-primary {
   background-color: #6a1b9a !important; /* Color morado */
 }
+
+
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  flex: 0;
+}
+
+.card-text {
+  flex: 1;  /* Esto hace que el texto ocupe todo el espacio disponible */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;  /* El número de líneas que deseas mostrar */
+  -webkit-box-orient: vertical;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  flex: 0;
+}
