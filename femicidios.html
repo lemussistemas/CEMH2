@@ -15,6 +15,14 @@
         height: 400px;
         width: 100%;
       }
+      #bar1 {
+        height: 400px;
+        width: 100%;
+      }
+      #bar2 {
+        height: 400px;
+        width: 100%;
+      }
     </style>
 </head>
 
@@ -115,7 +123,34 @@
                 </div>
             
             </div>
-          
+            <div class="col-md-6 v-divider">
+
+                <div class="card mb-4">
+                    <p class="lead text-center" ><b>
+                        Tipo de arma o medio utilizado:</b>
+                    </p>
+                    <div class="card-body">
+                        <div id="bar1">
+                        
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="col-md-12 v-divider">
+
+                <div class="card mb-4">
+                    <p class="lead text-center" ><b>
+                        Promedio de edad:</b>
+                    </p>
+                    <div class="card-body">
+                        <div id="bar2">
+                        
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
         </div>
     </div>
 
@@ -152,5 +187,66 @@ new d3plus.BarChart()
 
 </script>
 
+<script type="text/javascript">
+
+    var data = [
+      {id: "Arma de fuego", x: 'Enero', y:  2},
+      {id: "Arma blanca", x: 'Enero', y: 7},
+      {id: "Arma de fuego", x: 'Febrero', y:  9},
+      {id: "Arma blanca", x: 'Febrero', y: 17},
+      {id: "Arma de fuego", x: 'Marzo', y:  4},
+      {id: "Arma blanca", x: 'Marzo', y: 6},
+      {id: "Arma de fuego", x: 'Abril', y:  9},
+      {id: "Arma blanca", x: 'Abril', y: 17},
+    ];
+    
+    new d3plus.LinePlot()
+      .data(data)
+      .groupBy("id")
+      .shapeConfig({
+        Line: {
+          strokeLinecap: "round",
+          strokeWidth: 10
+        },
+        sort: function(a, b) {
+          if (a.id === "beta") return 1;
+          else return -1;
+        }
+      })
+      .select("#bar1")
+      .render();
+    
+    </script>
+
+
+
+<script type="text/javascript">
+
+    var myData = [
+      {"Travel": "0 a 12 años","Travel Time": "0 a 12 años",     "Population Percentage": 5,  year: 2022},
+      {"Travel": "12 a 19 años","Travel Time": "12 a 19 años", "Population Percentage": 25, year: 2022},
+      {"Travel": "19 a 40 años","Travel Time": "19 a 40 años", "Population Percentage": 10, year: 2022},
+      {"Travel": "40 a 60 años","Travel Time": "40 a 60 años", "Population Percentage": 11, year: 2022},
+      {"Travel": "Mayor a 60","Travel Time": "Mayor a 60",  "Population Percentage": 19, year: 2022},
+      {"Travel": "0 a 12 años","Travel Time": "0 a 12 años",     "Population Percentage": 5,  year: 2023},
+      {"Travel": "12 a 19 años","Travel Time": "12 a 19 años", "Population Percentage": 5, year: 2023},
+      {"Travel": "19 a 40 años","Travel Time": "19 a 40 años", "Population Percentage": 1, year: 2023},
+      {"Travel": "40 a 60 años","Travel Time": "40 a 60 años", "Population Percentage": 2, year: 2023},
+      {"Travel": "Mayor a 60","Travel Time": "Mayor a 60",  "Population Percentage": 9, year: 2023},
+    ];
+    new d3plus.BarChart()
+      .config({
+        data: myData,
+        groupBy: "Travel",
+        x: "Travel Time",
+        y: "Population Percentage",
+        time: "year",
+        legend: true
+      })
+      .select("#bar2")
+      .render();
+    
+    
+    </script>
 </script>
 </html>
