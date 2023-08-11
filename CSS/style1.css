@@ -88,3 +88,51 @@ body {
     height: 150px;
     object-fit: cover;
 }
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .btn-feminist-green {
+    align-self: flex-end;
+}
+
+body {
+    /* Assuming there's already a background image set */
+    background-attachment: fixed;
+    perspective: 1px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Making sure the main content scrolls over the fixed background */
+.main-content {
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0);
+}
+
+/* Enhancing the parallax effect */
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Adding more spacing between sections */
+section, .section-class-name {
+    margin-bottom: 100px;
+}
+
+/* Adding a shadow to sections */
+section, .section-class-name {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;  /* Adding some padding to give space for the shadow */
+    background-color: white;  /* Setting a background color to ensure the shadow is visible */
+}
