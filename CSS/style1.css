@@ -136,3 +136,8 @@ section, .section-class-name {
     padding: 20px;  /* Adding some padding to give space for the shadow */
     background-color: white;  /* Setting a background color to ensure the shadow is visible */
 }
+
+footer {
+  background-color: #6a0dad;
+  color: white;
+}
