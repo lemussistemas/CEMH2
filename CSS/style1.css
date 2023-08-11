@@ -34,3 +34,57 @@
 .btn {
   flex: 0;
 }
+
+/* Added for improved design */
+body {
+  background-color: #FFFFFF !important;
+}
+
+/* Adding hover effects */
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+/* Refined styles for cards */
+.card-text {
+  transition: -webkit-line-clamp 0.3s;
+}
+
+.card-text:hover {
+  -webkit-line-clamp: 10;  /* Show more lines on hover */
+}
+
+.latest-news, .projects {
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.btn-feminist-green {
+    background-color: #00D166 !important;
+    color: #FFFFFF !important;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-card .btn {
+    align-self: flex-end;
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
